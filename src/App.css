@@ -1,3 +1,10 @@
+body {
+  font-family: 'Arial', sans-serif; /* Change font family to Arial for better readability */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  background-color: white; /* Light white background */
+}
+
 .App {
   text-align: center;
 }
@@ -5,34 +12,51 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+  animation: spin 20s linear infinite; /* Apply animation directly without media query */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+@keyframes spin {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-header {
+  background-color: black; /* Dark blue header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white; /* White text for good contrast */
+}
+
+.App-link {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline from links */
+  transition: color 0.3s ease; /* Add smooth color transition on hover */
+}
+
+.App-link:hover {
+  color: #33b5e5; /* Lighter blue color on hover */
+}
+
+/* Additional styles for a more modern look (adjust as needed) */
+h1, h2, h3 {
+  font-weight: bold; /* Emphasize headings */
+  margin-bottom: 1rem; /* Add some spacing after headings */
+}
+
+p {
+  line-height: 1.5; /* Improve readability with line spacing */
+}
+
+.container { /* Add a container class for specific sections */
+  padding: 20px; /* Add some padding for content sections */
+  max-width: 800px; /* Limit width for better responsiveness */
+  margin: 0 auto; /* Center content horizontally */
 }
